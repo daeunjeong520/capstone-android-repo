@@ -3,6 +3,9 @@ package com.daeun.capstone
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
+/**
+ * 주석
+ */
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
