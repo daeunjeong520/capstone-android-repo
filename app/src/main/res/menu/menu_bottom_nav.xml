@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/fragment_home"
+        android:title="프로젝트"
+        android:icon="@drawable/baseline_card_travel_24"/>
+    <item
+        android:id="@+id/fragment_search"
+        android:title="홈"
+        android:icon="@drawable/baseline_home_filled_24"/>
+    <item
+        android:id="@+id/fragment_favorite"
+        android:title="마이프로필"
+        android:icon="@drawable/baseline_account_circle_24"/>
+</menu>
