@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".freelanceProfileActivity">
+
+
+    <ScrollView
+        android:id="@+id/profileContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_marginStart="20dp">
+
+           <TextView
+               android:id="@+id/jobGroupText"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="직군"
+               style="@style/Freelancer_Profile_Textview"/>
+
+           <Spinner
+               android:id="@+id/jobGroupSpinner"
+               android:layout_width="150dp"
+               android:layout_height="wrap_content"/>
+
+           <TextView
+               android:id="@+id/jobText"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="직무"
+               style="@style/Freelancer_Profile_Textview"/>
+
+           <Spinner
+               android:id="@+id/jobSpinner"
+               android:layout_width="300dp"
+               android:layout_height="wrap_content"/>
+
+           <TextView
+               android:id="@+id/workStyleText"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="근무방식"
+               style="@style/Freelancer_Profile_Textview"/>
+
+           <Spinner
+               android:id="@+id/workStyleSpinner"
+               android:layout_width="150dp"
+               android:layout_height="wrap_content"/>
+
+           <TextView
+               android:id="@+id/careerText"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="경력"
+               style="@style/Freelancer_Profile_Textview"/>
+
+           <EditText
+               android:id="@+id/careerEditText"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+              android:hint="0개월 혹은 0년"/>
+
+           <TextView
+               android:id="@+id/startDateText"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="시작 가능 날짜"
+               style="@style/Freelancer_Profile_Textview"/>
+
+           <CalendarView
+               android:id="@+id/calendar"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+
+           <TextView
+               android:id="@+id/resumeText"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="이력서"
+               style="@style/Freelancer_Profile_Textview"/>
+
+           <android.widget.Button
+               android:id="@+id/resumeButton"
+               android:layout_width="250dp"
+               android:layout_height="44dp"
+               android:layout_marginTop="6dp"
+               android:text="  이력서 첨부하기"
+               android:background="@drawable/rectangle_style"
+               android:textColor="#6E6E6E"
+               android:gravity="center_vertical"/>
+
+           <Button
+               android:id="@+id/profileCreateButton"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="프로필 생성하기"
+               android:layout_gravity="center"
+               android:layout_marginTop="30dp"
+               android:textSize="18dp"/>
+
+       </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

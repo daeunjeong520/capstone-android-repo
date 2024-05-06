@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/topLine"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#B3B3B3"/>
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="프로젝트 이름"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/topLine"
+        />
+
+    <TextView
+        android:id="@+id/wantedJobText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="요구되는 직무"
+        android:textSize="15dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/titleText"
+        app:layout_constraintStart_toStartOf="@id/titleText" />
+
+    <TextView
+        android:id="@+id/wantedWorkStyleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="요구되는 근무환경"
+        android:textSize="17dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/wantedJobText"
+        app:layout_constraintStart_toStartOf="@id/wantedJobText"/>
+
+    <TextView
+        android:id="@+id/priceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="급여"
+        android:textSize="17dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/wantedWorkStyleText"
+        app:layout_constraintStart_toStartOf="@id/wantedJobText"/>
+
+    <TextView
+        android:id="@+id/expectedStartDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="시작예상일"
+        android:textSize="17dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/priceText"
+        app:layout_constraintStart_toStartOf="@id/wantedJobText"/>
+
+    <View
+        android:id="@+id/underLine"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/expectedStartDateText"
+        android:background="#B3B3B3"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
