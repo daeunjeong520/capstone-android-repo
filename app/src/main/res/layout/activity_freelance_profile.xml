@@ -7,108 +7,144 @@
     android:layout_height="match_parent"
     tools:context=".freelanceProfileActivity">
 
-
-    <ScrollView
-        android:id="@+id/profileContent"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:layout_height="?attr/actionBarSize"
+        android:background="#EFEFEF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:orientation="vertical"
-           android:layout_marginStart="20dp">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways">
 
-           <TextView
-               android:id="@+id/jobGroupText"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="직군"
-               style="@style/Freelancer_Profile_Textview"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:text="프로필 생성" />
 
-           <Spinner
-               android:id="@+id/jobGroupSpinner"
-               android:layout_width="150dp"
-               android:layout_height="wrap_content"/>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
 
-           <TextView
-               android:id="@+id/jobText"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="직무"
-               style="@style/Freelancer_Profile_Textview"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/search_result"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
-           <Spinner
-               android:id="@+id/jobSpinner"
-               android:layout_width="300dp"
-               android:layout_height="wrap_content"/>
+        <ScrollView
+            android:id="@+id/profileContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_constraintTop_toTopOf="parent">
 
-           <TextView
-               android:id="@+id/workStyleText"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="근무방식"
-               style="@style/Freelancer_Profile_Textview"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical">
 
-           <Spinner
-               android:id="@+id/workStyleSpinner"
-               android:layout_width="150dp"
-               android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/jobGroupText"
+                    style="@style/Freelancer_Profile_Textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="직군" />
 
-           <TextView
-               android:id="@+id/careerText"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="경력"
-               style="@style/Freelancer_Profile_Textview"/>
+                <Spinner
+                    android:id="@+id/jobGroupSpinner"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" />
 
-           <EditText
-               android:id="@+id/careerEditText"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-              android:hint="0개월 혹은 0년"/>
+                <TextView
+                    android:id="@+id/jobText"
+                    style="@style/Freelancer_Profile_Textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="직무" />
 
-           <TextView
-               android:id="@+id/startDateText"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="시작 가능 날짜"
-               style="@style/Freelancer_Profile_Textview"/>
+                <Spinner
+                    android:id="@+id/jobSpinner"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content" />
 
-           <CalendarView
-               android:id="@+id/calendar"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/workStyleText"
+                    style="@style/Freelancer_Profile_Textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="근무방식" />
 
-           <TextView
-               android:id="@+id/resumeText"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="이력서"
-               style="@style/Freelancer_Profile_Textview"/>
+                <Spinner
+                    android:id="@+id/workStyleSpinner"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content" />
 
-           <android.widget.Button
-               android:id="@+id/resumeButton"
-               android:layout_width="250dp"
-               android:layout_height="44dp"
-               android:layout_marginTop="6dp"
-               android:text="  이력서 첨부하기"
-               android:background="@drawable/rectangle_style"
-               android:textColor="#6E6E6E"
-               android:gravity="center_vertical"/>
+                <TextView
+                    android:id="@+id/careerText"
+                    style="@style/Freelancer_Profile_Textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="경력" />
 
-           <Button
-               android:id="@+id/profileCreateButton"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="프로필 생성하기"
-               android:layout_gravity="center"
-               android:layout_marginTop="30dp"
-               android:textSize="18dp"/>
+                <EditText
+                    android:id="@+id/careerEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="0개월 혹은 0년" />
 
-       </LinearLayout>
-    </ScrollView>
+                <TextView
+                    android:id="@+id/startDateText"
+                    style="@style/Freelancer_Profile_Textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="시작 가능 날짜" />
+
+                <CalendarView
+                    android:id="@+id/calendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/resumeText"
+                    style="@style/Freelancer_Profile_Textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이력서" />
+
+                <android.widget.Button
+                    android:id="@+id/resumeButton"
+                    android:layout_width="250dp"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/rectangle_style"
+                    android:gravity="center_vertical"
+                    android:text="  이력서 첨부하기"
+                    android:textColor="#6E6E6E" />
+
+                <Button
+                    android:id="@+id/profileCreateButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:text="프로필 생성하기"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

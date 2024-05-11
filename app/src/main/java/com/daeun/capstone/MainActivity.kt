@@ -18,5 +18,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         //클라이언트 버튼 리스너 추가 예정
+
     }
 }

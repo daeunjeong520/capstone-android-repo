@@ -1,5 +1,6 @@
 package com.daeun.capstone
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import androidx.activity.enableEdgeToEdge
@@ -9,7 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.daeun.capstone.databinding.ActivitySearchBinding
 
 class SearchActivity : AppCompatActivity() {
-    private lateinit var binding:ActivitySearchBinding
+    private lateinit var binding: ActivitySearchBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivitySearchBinding.inflate(layoutInflater)
@@ -36,6 +37,11 @@ class SearchActivity : AppCompatActivity() {
         /*binding.watchResultButton.setOnClickListener {
             인텐트 처리
         }*/
+
+        binding.watchResultButton.setOnClickListener{
+            val intent = Intent(this@SearchActivity, SearchResultActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 }

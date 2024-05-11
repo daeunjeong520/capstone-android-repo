@@ -36,6 +36,11 @@
         android:name=".SearchActivity"
         android:exported="false"/>
 
+        <activity android:name=".SearchResultActivity" />
+        <activity android:name=".MainActivity2" />
+        <activity android:name=".MainActivity3" />
+        <activity android:name=".MainActivity4" />
+
     </application>
 
 </manifest>
